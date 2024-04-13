@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      tags:
+        - "nginx-rtmp:latest"
+    ports:
+      - 10001:80
+      - 10000:1935
+    expose:
+      - 80
+      - 1935
